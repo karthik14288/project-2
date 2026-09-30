@@ -6,7 +6,8 @@
     "dev:server": "npm --prefix server run dev",
     "dev:client": "npm --prefix client run dev",
     "build:server": "npm --prefix server run build",
-    "build:client": "npm --prefix client run build"
+    "build:client": "npm --prefix client run build",
+    "push": "node scripts/push.mjs"
   },
   "devDependencies": {
     "isomorphic-git": "^1.42.4"
