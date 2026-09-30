@@ -20,7 +20,23 @@ app.use(cors({
 app.use(express.json({ limit: '60mb' }));
 app.use(express.urlencoded({ extended: true, limit: '60mb' }));
 
-// Health Check
+// Root & Health Checks
+app.get('/', (_req: Request, res: Response) => {
+  res.status(200).json({
+    status: 'online',
+    service: 'Unify Cross-Modal AI Reasoning Platform Backend API',
+    version: '1.0.0',
+    healthCheck: '/api/health',
+    endpoints: {
+      upload: 'POST /api/upload',
+      ingest: 'POST /api/ingest',
+      query: 'POST /api/query',
+      files: 'GET /api/files'
+    },
+    documentation: 'https://github.com/karthik14288/project-2'
+  });
+});
+
 app.get('/health', (_req: Request, res: Response) => {
   res.status(200).json({
     status: 'healthy',
