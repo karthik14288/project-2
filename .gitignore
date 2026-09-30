@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Production Build Outputs
+dist/
+client/dist/
+server/dist/
+
+# Environment Variables (Secrets)
+.env
+.env.local
+.env.*.local
+client/.env
+server/.env
+
+# Logs & Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor & System Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary IDE / Brain Artifacts
+.gemini/
+.system_generated/
+scratch/
+project-2/
